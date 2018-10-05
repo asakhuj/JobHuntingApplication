@@ -1,0 +1,2 @@
+class ReplyToInquiry < ApplicationRecord
+end

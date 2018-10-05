@@ -8,7 +8,12 @@ class HouseHuntersController < ApplicationController
     #@company = {params[:company_name] }
     @house_hunters = HouseHunter.new(signup_params)
     if @house_hunters.save
-      redirect_to  root_path
+      if (session[:user_type] == "admin")
+        redirect_to '/homepage' , notice: 'House hunter was successfully created .'
+      else
+         redirect_to root_path
+      end
+
     else
       render 'new'
     end

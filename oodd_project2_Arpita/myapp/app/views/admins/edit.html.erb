@@ -1,0 +1,31 @@
+<h1> Edit profile : Admin </h1>
+<br>
+
+<%= form_with url: "/admins/"+(@admin.id).to_s,  scope: :admin , local: true ,  method: 'PATCH' do |form| %>
+
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@admin.errors.count, "error") %> prohibited
+        this page from being saved:
+      </h2>
+      <ul>
+        <% @admin.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <br>
+  <br>
+  <%= submit_tag("Update") %>
+  <br>
+  <br>
+
+  <%= link_to 'Go back to homepage', '/homepage' %> |
+<% end %>

@@ -14,7 +14,38 @@ class InquiriesController < ApplicationController
       format.html { redirect_back notice: 'Error' }
     end
     end
+    end
 
+    def new_reply
+      @inquiry_id = params[:id]
+      @inquiry = Inquiry.find(@inquiry_id)
+      @reply = ReplyToInquiry.new
+
+    end
+
+    def create_reply
+      @reply = ReplyToInquiry.new(reply_params)
+      @inquiry_id = params[:id]
+      @reply["inquiry_id"] = @inquiry_id
+      respond_to do |format|
+        if @reply.save
+          format.html { redirect_to "/inquiries/show_all_for_company" , notice: 'Reply for the inquiry was successfully sent' }
+        else
+          format.html { redirect_back notice: 'Error' }
+        end
+      end
+    end
+
+
+
+
+  def show_all_for_company
+    @realtor = Realtor.find_by(id: session[:id] )
+    @real_estate_company_id  = (@realtor["real_estate_company_id"]).to_s
+    sql = "select * from inquiries where house_id in ( select house_id from houses where real_estate_company_id = "+@real_estate_company_id +" )"
+    puts sql
+    #Model.connection.select_all('sql').to_hash
+    @inquiries = Inquiry.connection.select_all(sql).to_hash
   end
 
 
@@ -76,4 +107,9 @@ class InquiriesController < ApplicationController
   def inquiry_params
     params.require(:inquiry).permit(:house_id,  :message_content,  :subject , :house_hunter_id )
   end
-end
+
+    def reply_params
+      params.require(:reply).permit(:reply )
+    end
+
+  end

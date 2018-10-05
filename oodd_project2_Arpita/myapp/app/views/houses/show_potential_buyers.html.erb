@@ -1,0 +1,31 @@
+
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th>Email </th>
+    <th>Phone</th>
+    <th>Preferred contact method</th>
+
+
+  </tr>
+
+  <% if !@house_hunters.nil? then @house_hunters.each do |househunter| %>
+
+
+      <tr>
+        <td><%= househunter["name"] %></td>
+        <td><%= househunter["email"] %></td>
+        <td><%= househunter["phone"] %></td>
+        <td><%= househunter["contact_method"] %></td>
+
+
+      </tr>
+      <% end %>
+    <% end %>
+
+</table>
+
+<br />
+
+<%= link_to 'Go back to homepage ', homepage_path %>

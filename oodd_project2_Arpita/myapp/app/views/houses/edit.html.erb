@@ -1,6 +1,6 @@
-<h1> List a house </h1>
+<h1> Edit a house </h1>
 
-<%= form_with url: "/houses/create" , scope: :house do |form| %>
+<%= form_with url: "/houses/"+(@house.id).to_s , scope: :house , method: 'PATCH' do |form| %>
 
   <% if @house.errors.any? %>
     <div id="error_explanation">
@@ -51,5 +51,5 @@
   <br>
 
   <br>
-  <%= submit_tag("Post the house") %>
+  <%= submit_tag("Edit this house") %>
 <% end %>

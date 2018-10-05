@@ -1,4 +1,7 @@
+
 <%= form_with url: "save_company"  do |form| %>
+
+
   <%= collection_select(:company, :company_id, RealEstateCompany.all, :id, :company_name, prompt: true) %>
   <%= submit_tag("Submit company") %>
 <% end %>

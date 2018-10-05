@@ -1,0 +1,23 @@
+<h1>All Inquiries for my company</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <th> Subject </th>
+    <th>  Message content </th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% if !@inquiries.nil? then @inquiries.each do |inquiry| %>
+      <tr>
+        <td><%= inquiry["subject"] %></td>
+        <td><%= inquiry["message_content"] %></td>
+        <td><%= link_to 'Reply to the inquiry', '/inquiries/new_reply/'+inquiry["id"].to_s %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Go back to homepage ', homepage_path %>
