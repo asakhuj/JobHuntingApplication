@@ -1,3 +1,13 @@
+<head>
+  <style>
+    #notice {
+      color: red;
+      font-size: large;
+    }
+
+  </style>
+</head>
+<%= render "banner" %>
 <%= render "header" %>
 <p id="notice"><%= notice %></p>
 
@@ -8,21 +18,62 @@
   <br>
   <%= link_to "View all users ", '/users/show_all' %>
   <br>
+
+  <br>
+  <%= link_to "Edit profile ",  edit_admin_url(session[:id][0]) %>
+  <br>
+  <br>
   <%= link_to "Show realtors ", '/realtors' %>
   <br>
   <%= link_to "Show real estate companies ", '/real_estate_companies' %>
   <br>
   <%= link_to "View all houses ", houses_url %>
+  <br>
+  <br>
+  <%= link_to "Create House Hunters", 'house_hunters/new' %>
+  <br>
+  <br>
+  <%= link_to "Create Realtors", 'realtors/new' %>
+  <br>
+  <br>
+  <%= link_to "View all inquiries",  '/inquiries/' %>
 <%end %>
 
 <% if session[:user_type] =="realtor"%>
-  <%= link_to "Update/Add the company information ", '/realtors/edit_company' %>
+  <% if @real_estate_company_id == -1 %>
+
+   NOTE :  You have not added your company to your profile. We recommend you adding the company information to enjoy more features of our website
+
+    <%else %>
+    <br>
+    <br>
+    <%= link_to "Edit company information ",  edit_real_estate_company_url(@real_estate_company_id) %>
+    <br>
+    <br>
+    <%= link_to "List a house ", '/houses/new' %>
+    <br>
+    <br>
+    <%= link_to "View houses posted by my company ",  'houses/houses_posted_by_company' %>
+    <br>
+    <br>
+    <%= link_to "View all inquiries for my company ",  '/inquiries/show_all_for_company' %>
+    <br>
+    <br>
+    <%end %>
   <br>
   <br>
-  <%= link_to "List a house ", '/houses/new' %>
+  <%= link_to "Edit profile ",  edit_realtor_url(session[:id]) %>
+
+
   <br>
   <br>
   <%= link_to "View all houses ", '/houses/index' %>
+
+  <br>
+  <br>
+  <%= link_to "Houses posted by me ",  'houses/houses_posted_by_me' %>
+
+
 
 <%end %>
 
@@ -38,3 +89,7 @@
   <%= link_to "View my inquiries ", '/inquiries/current_user_inquiries' %>
 
 <%end %>
+
+<br>
+<br>
+<%= link_to "Reset password ", '/users/reset_password_form'  %>

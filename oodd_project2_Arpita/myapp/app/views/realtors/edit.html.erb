@@ -1,0 +1,41 @@
+<h1> Edit profile : Realtor </h1>
+<br>
+
+<%= form_with url: "/realtors/"+(@realtor.id).to_s,  scope: :realtor , local: true ,  method: 'PATCH' do |form| %>
+
+  <% if @realtor.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@realtor.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @realtor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+
+  <br>
+
+  <%= form.label :phone %>
+  <%= form.text_field :phone %>
+  <br>
+  <br>
+  <%= form.label :real_estate_company %>
+  <%= form.select(:real_estate_company_id, RealEstateCompany.all.collect {|u| [u.company_name, u.id]}, :prompt => 'Select', :include_blank => true) %>  <%= link_to "Did not find your company in the drop down ? Don't worry, click here ", '/real_estate_companies/new' %>
+  <br>
+  <br>
+
+  <%= submit_tag("Update") %>
+  <br>
+  <br>
+
+  <%= link_to 'Go back to homepage', '/homepage' %> |
+<% end %>

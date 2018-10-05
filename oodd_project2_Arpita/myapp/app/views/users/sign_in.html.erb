@@ -1,12 +1,26 @@
 <%= render "banner" %>
-<%= form_with url: "/users/check_credentials"  do |form| %>
 
+<head>
+  <style>
+    #notice {
+      color: red;
+      font-size: large;
+    }
+    #main {
+      text-indent: 30px;
+      color: darkblue;
+    }
+  </style>
+</head>
+<p id="notice"> <%=notice %></p>
+<%= form_with url: "/users/check_credentials"  do |form| %>
+  <p id="main">
   <%= form.label :email %>
   <%= form.text_field :email %>
   <br>
   <br>
   <%= form.label :password %>
-  <%= form.text_field :password %>
+  <%= form.password_field :password %>
   <br>
 
   <br>
@@ -17,12 +31,13 @@
   <%= form.radio_button :usertype, 'admin'%>
   <%= form.label :admin %>
   <br>
-  <%= submit_tag("Login") %>
+  <br>
+           <%= submit_tag("Login") %>
   <br>
   <br>
   <%= link_to "Sign up as Realtor", '/realtors/new' %>
   <br>
   <br>
   <%= link_to "Sign up as House Hunter", '/house_hunters/new' %>
-
+  </p>
 <% end %>

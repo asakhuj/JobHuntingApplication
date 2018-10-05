@@ -3,7 +3,16 @@ class RealEstateCompaniesController < ApplicationController
   def create
     @company = RealEstateCompany.new(company_params)
     if @company.save
-      redirect_to '/homepage'
+      if(session[:user_type] == "realtor")
+        @realtor = Realtor.find_by(id: session[:id])
+        @realtor["real_estate_company_id"] = @company.id
+        @realtor.save
+        redirect_to '/homepage' , notice: 'Company was successfully created and added to your profile .'
+      else
+        redirect_to '/homepage'
+      end
+
+
     end
   end
 

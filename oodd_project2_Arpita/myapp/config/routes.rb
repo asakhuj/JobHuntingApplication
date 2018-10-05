@@ -24,7 +24,16 @@ Rails.application.routes.draw do
   get '/inquiries/new/:id' => 'inquiries#new'
   post '/inquiries/create' => 'inquiries#create'
   get '/inquiries/current_user_inquiries' => 'inquiries#current_user_inquiries'
+  get 'houses/houses_posted_by_me' => 'houses#houses_posted_by_me'
+  get 'houses/houses_posted_by_company' => 'houses#houses_posted_by_company'
+  get '/show_potential_buyers/:id' => 'houses#show_potential_buyers'
+  get '/inquiries/show_all_for_company' => 'inquiries#show_all_for_company'
+  get '/inquiries/new_reply/:id' => 'inquiries#new_reply'
+  post '/inquiries/create_reply/:id' => 'inquiries#create_reply'
+  get '/users/reset_password_form' => 'users#reset_password_form'
+  post '/users/reset_password' => 'users#reset_password'
   resources :inquiries
+  resources :admins
   resources :realtors
   resources :real_estate_companies
   resources :houses

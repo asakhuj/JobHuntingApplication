@@ -1,0 +1,28 @@
+<h1>New Reply for the inquiry</h1>
+
+<p id="notice"><%= notice %></p>
+
+<%= form_with url: '/inquiries/create_reply/'+@inquiry.id.to_s , scope: :reply do |form| %>
+<p>
+  <b>Subject :</b>
+  <%= @inquiry.subject %>
+</p>
+
+<p>
+  <b>Message content</b>
+  <%= @inquiry.message_content %>
+</p>
+
+
+<%= form.label :reply %>
+  <br>
+<%= form.text_area :reply %>
+
+  <br>
+  <br>
+  <%= submit_tag("Create reply") %>
+<br>
+
+<%= link_to 'Go back ', '/inquiries/show_all_for_company' %>
+
+<%end %>

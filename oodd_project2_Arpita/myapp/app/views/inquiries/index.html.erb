@@ -13,8 +13,8 @@
         <td><%= inquiry.subject %></td>
         <td><%= inquiry.message_content %></td>
         <td><%= link_to 'Show', inquiry %></td>
-          <td><%= link_to 'Edit', edit_inquiries_path(inquiry) %></td>
-          <td><%= link_to 'Delete', company, method: :delete, data: { confirm: 'Are you sure?' }  %></td>
+          <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
+          <td><%= link_to 'Delete', inquiry, method: :delete, data: { confirm: 'Are you sure?' }  %></td>
       </tr>
     <% end %>
   <% end %>

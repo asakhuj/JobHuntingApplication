@@ -1,0 +1,54 @@
+<h1>Showing house</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location :</b>
+  <%= @house.location %>
+</p>
+
+<p>
+  <b>Square footage</b>
+  <%= @house.square_footage %>
+</p>
+
+<p>
+  <b>Year built</b>
+  <%= @house.year_built %>
+</p>
+
+<p>
+  <b>Style</b>
+  <%= @house.style %>
+</p>
+
+<p>
+  <b>Price</b>
+  <%= @house.price %>
+</p>
+
+<p>
+  <b>Number of floors</b>
+  <%= @house.number_of_floors %>
+</p>
+
+<p>
+  <b>Basement</b>
+  <%= @house.basement %>
+</p>
+
+<p>
+  <b>Current house owner</b>
+  <%= @house.current_house_owner %>
+</p>
+
+<p>
+  <b>Contact information of realtor</b>
+  <%= @house.contact_info_of_realtor %>
+</p>
+
+
+<%= link_to 'Go back ', 'houses_posted_by_me' %> |
+<br>
+
+<%= link_to 'Edit',  edit_house_path(@house) %>
