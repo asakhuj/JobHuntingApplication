@@ -32,6 +32,10 @@ Rails.application.routes.draw do
   post '/inquiries/create_reply/:id' => 'inquiries#create_reply'
   get '/users/reset_password_form' => 'users#reset_password_form'
   post '/users/reset_password' => 'users#reset_password'
+  get '/houses/add_image_to_house/:id' => 'houses#add_image_to_house'
+  post '/houses/upload_image/:id' => 'houses#upload_image'
+  get '/houses/my_interest_list' => 'houses#my_interest_list'
+  get '/houses/remove_from_interest_list/:id' => 'houses#remove_from_interest_list'
   resources :inquiries
   resources :admins
   resources :realtors

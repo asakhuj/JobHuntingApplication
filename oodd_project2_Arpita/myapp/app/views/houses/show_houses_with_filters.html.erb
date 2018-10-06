@@ -1,4 +1,15 @@
+<head>
+  <style>
+    #notice {
+      color: green;
+      font-size: large;
+    }
+
+  </style>
+</head>
 <h1>All houses</h1>
+<br>
+<br>
 <p id="notice"><%= notice %></p>
 <table>
   <tr>
@@ -25,7 +36,8 @@
         <td><%= house.basement %></td>
         <td><%= house.current_house_owner %></td>
         <td><%= house.contact_info_of_realtor %></td>
-        <td><%= link_to 'Add to Interest List', "/add_to_interest_list/"+(house.id.to_s) %></td>
+        <td><%= link_to 'Show', house %> || </td>
+        <td><%= link_to 'Add to Interest List', "/add_to_interest_list/"+(house.id.to_s) %> || </td>
         <td><%= link_to 'Inquiry', "/inquiries/new/"+(house.id.to_s) %></td>
       </tr>
     <% end %>

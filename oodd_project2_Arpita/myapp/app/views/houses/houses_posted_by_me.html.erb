@@ -25,9 +25,12 @@
         <td><%= house.basement %></td>
         <td><%= house.current_house_owner %></td>
         <td><%= house.contact_info_of_realtor %></td>
-        <td><%= link_to 'Show', house %></td>
-        <td><%= link_to 'Edit', edit_house_url(house) %></td>
+
+        <td><%= link_to 'Show', house %> || </td>
+        <td><%= link_to "Upload images to the house",  ' /houses/add_image_to_house/'+house.id.to_s %> || </td>
+        <td><%= link_to 'Edit', edit_house_url(house) %> || </td>
         <td><%= link_to 'Delete', house, method: :delete, data: { confirm: 'Are you sure?' }  %></td>
+
       </tr>
     <% end %>
   <% end %>
