@@ -1,0 +1,52 @@
+
+
+<head>
+  <style>
+    #notice {
+      color: red;
+      font-size: large;
+    }
+
+  </style>
+</head>
+<h1>My interest list</h1>
+<br>
+<br>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Square footage</th>
+    <th>Year built</th>
+    <th>Style</th>
+    <th>Price</th>
+    <th>Number of floors </th>
+    <th>Basement</th>
+    <th>Current house owner</th>
+    <th>Contact information of realtor</th>
+    <th></th>
+  </tr>
+
+  <% if !@houses.nil? then @houses
+      .each do |house| %>
+      <tr>
+        <td><%= house["location"] %></td>
+        <td><%= house["square_footage"] %></td>
+        <td><%= house["year_built"]%></td>
+        <td><%= house["style"] %></td>
+        <td><%= house["price"] %></td>
+        <td><%= house["number_of_floors"] %></td>
+        <td><%= house["basement"] %></td>
+        <td><%= house["current_house_owner"] %></td>
+        <td><%= house["contact_info_of_realtor"] %></td>
+        <td><%= link_to 'Show', house["id"].to_s %> ||  </td>
+        <td><%= link_to 'Remove from interest list','/houses/remove_from_interest_list/'+ house["id"].to_s %>  </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Go back to homepage ', homepage_path %>

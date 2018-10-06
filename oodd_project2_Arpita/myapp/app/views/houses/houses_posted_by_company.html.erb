@@ -25,6 +25,7 @@
         <td><%= house.basement %></td>
         <td><%= house.current_house_owner %></td>
         <td><%= house.contact_info_of_realtor %></td>
+        <td><%= link_to 'Show', house %> || </td>
         <td><%= link_to 'Show potential buyers', "/show_potential_buyers/" +house.id.to_s %></td>
 
       </tr>

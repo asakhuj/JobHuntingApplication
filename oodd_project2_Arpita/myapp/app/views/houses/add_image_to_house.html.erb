@@ -1,4 +1,4 @@
-<h1>Showing house</h1>
+<h1>Uploading image for a house</h1>
 
 <p id="notice"><%= notice %></p>
 
@@ -47,13 +47,16 @@
   <%= @house.contact_info_of_realtor %>
 </p>
 
-<br>
-<br>
-<%= image_tag(@house.file_name.url, alt: 'Image') if @house.file_name? %>
+<%= form_with url: "/houses/upload_image/"+@house.id.to_s , scope: :house do |form| %>
+<div>
+  <%= form.label :file_name %>
+  <%= form.file_field :file_name %>
+</div>
+  <br>
+  <br>
+  <%= submit_tag("Upload") %>
+  <%end %>
 
 <br>
 <br>
 <%= link_to 'Go back to homepage ', homepage_path %>
-<br>
-
-
