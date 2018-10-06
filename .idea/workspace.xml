@@ -43,24 +43,27 @@
         <counts>
           <entry key="Gemfile" value="46" />
           <entry key="erb" value="2082" />
-          <entry key="rb" value="2889" />
+          <entry key="rb" value="2890" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="RHTML" value="2082" />
-          <entry key="Ruby" value="2935" />
+          <entry key="Ruby" value="2936" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JobHuntingApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/users/homepage.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="12" />
+            <state relative-caret-position="558">
+              <caret line="87" column="58" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -87,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/houses/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -122,8 +125,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/controllers/houses_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+            <state relative-caret-position="340">
+              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -411,20 +414,20 @@
       <workItem from="1538427837891" duration="1352000" />
       <workItem from="1538439713876" duration="17571000" />
       <workItem from="1538542326989" duration="3460000" />
-      <workItem from="1538751249009" duration="14007000" />
+      <workItem from="1538751249009" duration="15948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38772000" />
+    <option name="totallyTimeSpent" value="40713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="19" width="1362" height="689" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26497695" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990991" visible="true" weight="0.26497695" />
+      <window_info id="Structure" order="1" sideWeight="0.5009009" side_tool="true" weight="0.26497695" />
+      <window_info id="Favorites" order="2" sideWeight="0.5009009" side_tool="true" weight="0.26497695" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32851985" />
@@ -724,24 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/houses/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/houses/houses_posted_by_company.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/users/homepage.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -755,7 +744,7 @@
     <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/houses/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -766,10 +755,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/houses/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/views/users/homepage.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="87" column="58" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/oodd_project2_Arpita/myapp/app/controllers/houses_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+        <state relative-caret-position="340">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
         </state>
       </provider>
     </entry>
